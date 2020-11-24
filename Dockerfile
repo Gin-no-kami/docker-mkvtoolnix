@@ -131,9 +131,22 @@ RUN  \
 RUN \
     APP_ICON_URL=https://github.com/jlesage/docker-templates/raw/master/jlesage/images/mkvtoolnix-icon.png && \
     install_app_icon.sh "$APP_ICON_URL"
+    
+# Install Ruby
+RUN \
+    # Install packages needed by the build.
+    add-pkg --virtual build-dependencies \
+        build-base \
+        ruby \
+        ruby-dev
+        && \
+    gem install json &&
+    del-pkg build-dependencies
 
 # Add files.
 COPY rootfs/ /
+
+
 
 # Set environment variables.
 ENV APP_NAME="MKVToolNix"
