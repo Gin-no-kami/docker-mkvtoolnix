@@ -140,7 +140,7 @@ RUN \
         ruby \
         ruby-dev \
         && \
-    gem install json &&
+    gem install json && \
     del-pkg build-dependencies
 
 # Add files.
