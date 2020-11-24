@@ -138,7 +138,7 @@ RUN \
     add-pkg --virtual build-dependencies \
         build-base \
         ruby \
-        ruby-dev
+        ruby-dev \
         && \
     gem install json &&
     del-pkg build-dependencies
