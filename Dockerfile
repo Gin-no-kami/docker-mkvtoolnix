@@ -8,7 +8,7 @@
 FROM jlesage/baseimage-gui:alpine-3.12-v3.5.6
 
 # Docker image version is provided via build arg.
-ARG DOCKER_IMAGE_VERSION=latest
+ARG DOCKER_IMAGE_VERSION=v51.0.0
 
 # Define software versions.
 ARG MKVTOOLNIX_VERSION=51.0.0
