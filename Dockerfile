@@ -146,7 +146,7 @@ RUN \
 # Add files.
 COPY rootfs/ /
 
-
+USER 99:100
 
 # Set environment variables.
 ENV APP_NAME="MKVToolNix"
