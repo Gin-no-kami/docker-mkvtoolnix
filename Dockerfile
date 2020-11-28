@@ -137,7 +137,8 @@ RUN \
     # Install packages needed by the build.
     add-pkg --virtual build-dependencies \
         build-base \
-        ruby \
+        && \
+    add-pkg ruby \
         ruby-dev \
         && \
     gem install json && \
