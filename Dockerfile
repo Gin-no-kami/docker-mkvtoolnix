@@ -185,7 +185,7 @@ RUN \
     APP_ICON_URL=https://github.com/jlesage/docker-templates/raw/master/jlesage/images/mkvtoolnix-icon.png && \
     install_app_icon.sh "$APP_ICON_URL"
     
-# Install Ruby
+# Install Ruby & Bash
 RUN \
     # Install packages needed by the build.
     add-pkg --virtual build-dependencies \
@@ -193,6 +193,7 @@ RUN \
         && \
     add-pkg ruby \
         ruby-dev \
+		bash \
         && \
     gem install json && \
     del-pkg build-dependencies
